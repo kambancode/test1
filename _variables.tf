@@ -14,11 +14,17 @@ variable "project_name" {
 variable "enable_ec2" {
   description = "Enable (1) or disable (0) EC2 module creation"
   type        = bool
-  default     = true  # Enabled by default
+  default     = true # Enabled by default
 }
 
 variable "enable_rds" {
   description = "Enable or disable RDS module creation"
   type        = bool
-  default     = true  # Enabled by default
+  default     = true # Enabled by default
+}
+
+variable "enable_alb" {
+  description = "Enable or disable RDS module creation"
+  type        = bool
+  default     = true # Enabled by default
 }

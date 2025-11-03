@@ -13,8 +13,14 @@ variable "public_subnet_ids" {
   type        = list(string)
 }
 
+## ALB requrement
+variable "alb_sg_id" {
+  type        = string
+  default     = ""
+  description = "ID of the ALB security group (optional, for secure ingress)"
+}
 
-# variable "web_sg_id" {
-#   description = "ID of the web security group for DB access"
-#   type        = string
-# }
+variable "private_subnet_ids" {
+  description = "List of private subnet IDs"
+  type        = list(string)
+}
