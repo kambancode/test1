@@ -6,7 +6,7 @@ terraform {
     }
   }
 
-  # Uncomment after Dynamo and S3 state created. do: terraform init.
+  #   # Uncomment after Dynamo and S3 state created. do: terraform init.
   backend "s3" {
     bucket         = "506912659220-test-demo-tf-state" # From output s3_state_bucket (e.g., 123456789012-test-demo-tf-state)
     key            = "terraform.tfstate"
@@ -14,7 +14,7 @@ terraform {
     dynamodb_table = "test-demo-tf-locks" # From output dynamodb_lock_table
     encrypt        = true
   }
-  # Uncomment end.
+  #   # Uncomment end.
 }
 
 provider "aws" {

@@ -46,3 +46,9 @@ variable "enable_state_backend" {
   type        = bool
   default     = true
 }
+
+variable "github_repo" {
+  description = "GitHub repository in 'owner/repo' format"
+  type        = string
+  default     = "kambancode/test1"
+}

@@ -63,3 +63,9 @@ output "dynamodb_lock_table" {
   description = "Name of the DynamoDB table for Terraform locks (null if disabled)"
   value       = local.enable_state_backend ? module.dynamodb_lock[0].table_name : null
 }
+
+## GitHub OIDC
+output "github_oidc_role_arn" {
+  description = "ARN of the IAM role for GitHub Actions (null if disabled)"
+  value       = local.enable_github_oidc ? module.github_oidc[0].role_arn : null
+}
