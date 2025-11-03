@@ -40,3 +40,9 @@ output "alb_dns_name" {
   description = "DNS name of the ALB (null if disabled)"
   value       = length(module.alb) > 0 ? module.alb[0].alb_dns_name : null
 }
+
+## S3 Endpoint
+output "s3_endpoint_id" {
+  description = "ID of the S3 VPC Endpoint (null if disabled)"
+  value       = local.enable_s3_endpoint ? module.s3_endpoint[0].s3_endpoint_id : null
+}

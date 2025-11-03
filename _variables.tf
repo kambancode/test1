@@ -28,3 +28,9 @@ variable "enable_alb" {
   type        = bool
   default     = true # Enabled by default
 }
+
+variable "enable_s3_endpoint" {
+  description = "Enable or disable S3 VPC Endpoint module creation"
+  type        = bool
+  default     = true # Enabled by default
+}
