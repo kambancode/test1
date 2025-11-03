@@ -13,3 +13,9 @@ output "db_ssm_param_name" {
   description = "Name of the SSM Parameter for DB password"
   value       = aws_ssm_parameter.db_password.name
 }
+
+# Monitoring
+output "db_identifier" {
+  description = "Identifier of the RDS instance"
+  value       = aws_db_instance.main.identifier
+}

@@ -8,7 +8,7 @@ output "web_sg_id" {
   value       = aws_security_group.web.id
 }
 
-# ALB Requirement
+# ALB Requirement + Monitoring
 output "web_instance_id" {
   description = "ID of the web EC2 instance"
   value       = aws_instance.web.id

@@ -46,3 +46,20 @@ output "s3_endpoint_id" {
   description = "ID of the S3 VPC Endpoint (null if disabled)"
   value       = local.enable_s3_endpoint ? module.s3_endpoint[0].s3_endpoint_id : null
 }
+
+## Monitoring
+output "dashboard_url" {
+  description = "URL of the CloudWatch dashboard (null if disabled)"
+  value       = local.enable_monitoring ? module.monitoring[0].dashboard_url : null
+}
+
+## State Backend
+output "s3_state_bucket" {
+  description = "Name of the S3 bucket for Terraform state (null if disabled)"
+  value       = local.enable_state_backend ? module.s3_state[0].bucket_name : null
+}
+
+output "dynamodb_lock_table" {
+  description = "Name of the DynamoDB table for Terraform locks (null if disabled)"
+  value       = local.enable_state_backend ? module.dynamodb_lock[0].table_name : null
+}

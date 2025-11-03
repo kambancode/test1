@@ -34,3 +34,15 @@ variable "enable_s3_endpoint" {
   type        = bool
   default     = true # Enabled by default
 }
+
+variable "enable_monitoring" {
+  description = "Enable or disable CloudWatch monitoring module creation"
+  type        = bool
+  default     = true
+}
+
+variable "enable_state_backend" {
+  description = "Enable or disable Terraform state backend resources (S3 + DynamoDB)"
+  type        = bool
+  default     = true
+}
